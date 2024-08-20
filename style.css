@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: azure;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: sans-serif;
+
+}
+#header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(me.jpg);
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    width: 0;
+    height: 3px;
+    content: '';
+    position:absolute;
+    background: rgb(152, 14, 12);
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+   
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: rgb(215, 29, 29);
+}
+#about{
+    padding: 80px 0;
+
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex-basis: 35%;
+}
+.col-1 img{
+    border-radius: 20px;
+    width: 100%;
+    height: 500px;
+
+}
+.col-2 h1{
+    color: rgb(241, 207, 156);
+    font-size: 60px;
+}
+.col-2{
+    color: rgb(241, 207, 156);
+    flex-basis: 60%;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+.tab-links{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(255, 0, 0);
+    transition: 0.3s;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgb(0, 238, 255);
+    font-size: 17px;
+    font-weight: 400;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*----------Services---------------- */
+#services{
+    padding: 40px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: rgb(49, 49, 49);
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    
+}
+.services-list div i{
+   padding-bottom: 10px;
+    font-size: 50px;
+    margin-top: 20px
+    }
+    .services-list div h2{
+        padding-bottom: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(255, 255, 255);
+    }
+    .services-list div:hover{
+        background:rgb(12, 33, 87) ;
+        transform: translateY(-10px);
+    }
+    /* --------------Portfolio----------------- */
+    #portfolio{
+        padding: 50px 0;
+    }
+    .work-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+    .work{
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden ;
+    }
+    .work img{
+         width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+.weather img{
+    height: 460px;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 179, 255));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 800;
+    font-family: Arial;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    
+    font-size: 18px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background: rgb(12, 105, 118);
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.3);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn .butt{
+    height: 40px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(89, 0, 255);
+    border-radius: 15px;
+    border: 3px solid blanchedalmond;
+    margin-top: 30px;
+    transition: background 0.4s;
+    transition: transform 0.3;
+}
+.btn .butt:hover{
+    background: rgb(5, 5, 209);
+    transform: scale(1.1);
+}
+
+
+/* ---------------------Contact----------------- */
+
+.contact-left{
+    flex-basis: 40%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: rgb(229, 172, 97);
+    font-size: 20px;
+    margin-right: 15px
+}
+.social-items{
+    margin-top: 20px;
+    
+}
+.social-items a{
+    font-size: 30px;
+    margin-right: 15px;
+    color: darkgray;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-items a:hover{
+    transform: translateY(-5px);
+}
+.buton{
+    height: 50px;
+    width: 130px;
+    background: red;
+    margin-top: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+   
+    
+
+}
+.buton a{
+    padding-top:15px ;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    background: rgb(65, 65, 65);
+    outline: none;
+    border-radius: 10px;
+    color: palegoldenrod;
+    margin: 17px 0;
+    padding: 15px;
+    font-size: 18px;
+}
+.copy-right{
+    width: 100%;
+    text-align: center;
+    background: rgb(48, 48, 48);
+    margin-top: 20px;
+    padding: 20px 0;
+}
+.copy-right i{
+    color: red;
+}
+#msg{
+    margin-top: -40px;
+    color: rgb(167, 109, 220);
+}
